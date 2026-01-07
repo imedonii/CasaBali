@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Menu } from 'lucide-react';
+import Image from 'next/image';
 
 interface NavigationProps {
   isScrolled: boolean;
@@ -16,10 +17,10 @@ export default function Navigation({ isScrolled }: NavigationProps) {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <motion.div whileHover={{ scale: 1.05 }} className="cursor-pointer">
-          <h1 className="text-3xl text-[#570f46]">Casa Bali</h1>
+          <Image src="/CasaBali.svg" alt="Casa Bali" width={120} height={120} />
         </motion.div>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-8 text-lg">
           <a
             href="#mattress"
             className="text-gray-700 hover:text-[#570f46] transition-colors"
