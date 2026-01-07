@@ -49,28 +49,19 @@ export default function Materials() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-green-200 mb-6">
             <Leaf className="w-4 h-4 text-green-600" />
-            <span
-              className="text-sm text-green-700"
-              style={{ fontFamily: "'Inter', sans-serif" }}
-            >
+            <span className="text-sm text-green-700">
               Premium & Sustainable
             </span>
           </div>
 
-          <h2
-            className="text-5xl md:text-6xl text-[#570f46] mb-6"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
+          <h2 className="text-5xl md:text-6xl text-[#570f46] mb-6">
             Materials that
             <br />
             <span className="bg-gradient-to-r from-[#570f46] to-[#d28db9] bg-clip-text text-transparent">
               Matter
             </span>
           </h2>
-          <p
-            className="text-xl text-gray-600 max-w-2xl mx-auto"
-            style={{ fontFamily: "'Inter', sans-serif" }}
-          >
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             We're committed to your health and our planet's future
           </p>
         </motion.div>
@@ -95,18 +86,10 @@ export default function Materials() {
                 </motion.div>
 
                 <div>
-                  <h3
-                    className="text-2xl text-[#570f46] mb-3"
-                    style={{ fontFamily: "'Playfair Display', serif" }}
-                  >
+                  <h3 className="text-2xl text-[#570f46] mb-3">
                     {material.title}
                   </h3>
-                  <p
-                    className="text-gray-600"
-                    style={{ fontFamily: "'Inter', sans-serif" }}
-                  >
-                    {material.description}
-                  </p>
+                  <p className="text-gray-600">{material.description}</p>
                 </div>
               </div>
             </motion.div>
@@ -120,10 +103,7 @@ export default function Materials() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="p-8 bg-gradient-to-br from-green-50 to-blue-50 rounded-3xl border border-green-200"
         >
-          <h3
-            className="text-2xl text-[#570f46] mb-6 text-center"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
+          <h3 className="text-2xl text-[#570f46] mb-6 text-center">
             Our Certifications
           </h3>
           <div className="flex flex-wrap justify-center gap-8">
@@ -140,12 +120,7 @@ export default function Materials() {
                 transition={{ delay: 1 + index * 0.1 }}
                 className="px-6 py-3 bg-white rounded-full border border-green-200 shadow-sm"
               >
-                <p
-                  className="text-sm text-gray-700"
-                  style={{ fontFamily: "'Inter', sans-serif" }}
-                >
-                  {cert}
-                </p>
+                <p className="text-sm text-gray-700">{cert}</p>
               </motion.div>
             ))}
           </div>

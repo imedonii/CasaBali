@@ -19,12 +19,7 @@ export default function BrandIntro() {
           className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full border border-[#d28db9]/30 mb-8"
         >
           <Sparkles className="w-4 h-4 text-[#d28db9]" />
-          <span
-            className="text-sm text-[#570f46]"
-            style={{ fontFamily: "'Inter', sans-serif" }}
-          >
-            What is Casa Bali?
-          </span>
+          <span className="text-sm text-[#570f46]">What is Casa Bali?</span>
         </motion.div>
 
         <motion.h2
@@ -32,7 +27,6 @@ export default function BrandIntro() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-5xl md:text-6xl text-[#570f46] mb-8"
-          style={{ fontFamily: "'Playfair Display', serif" }}
         >
           Where Luxury Meets
           <br />
@@ -46,7 +40,6 @@ export default function BrandIntro() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-12"
-          style={{ fontFamily: "'Inter', sans-serif" }}
         >
           Casa Bali isn't just a mattress—it's an experience. Crafted with
           premium materials and cutting-edge sleep technology, we've created a
@@ -84,18 +77,8 @@ export default function BrandIntro() {
               transition={{ duration: 0.6, delay: 0.8 + index * 0.2 }}
               className="p-8 bg-white/60 backdrop-blur-sm rounded-3xl border border-[#d28db9]/20 hover:border-[#d28db9]/50 transition-all hover:shadow-xl"
             >
-              <h3
-                className="text-2xl text-[#570f46] mb-3"
-                style={{ fontFamily: "'Playfair Display', serif" }}
-              >
-                {item.title}
-              </h3>
-              <p
-                className="text-gray-600"
-                style={{ fontFamily: "'Inter', sans-serif" }}
-              >
-                {item.description}
-              </p>
+              <h3 className="text-2xl text-[#570f46] mb-3">{item.title}</h3>
+              <p className="text-gray-600">{item.description}</p>
             </motion.div>
           ))}
         </motion.div>

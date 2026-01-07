@@ -49,20 +49,14 @@ export default function SleepBenefits() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2
-            className="text-5xl md:text-6xl text-[#570f46] mb-6"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
+          <h2 className="text-5xl md:text-6xl text-[#570f46] mb-6">
             The Benefits of
             <br />
             <span className="bg-gradient-to-r from-[#570f46] to-[#d28db9] bg-clip-text text-transparent">
               Better Sleep
             </span>
           </h2>
-          <p
-            className="text-xl text-gray-600 max-w-2xl mx-auto"
-            style={{ fontFamily: "'Inter', sans-serif" }}
-          >
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Quality sleep transforms every aspect of your life
           </p>
         </motion.div>
@@ -99,26 +93,17 @@ export default function SleepBenefits() {
                   animate={isInView ? { scale: 1 } : {}}
                   transition={{ delay: 0.5 + index * 0.15, type: 'spring' }}
                   className="text-5xl text-[#570f46] mb-3"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
                 >
                   {benefit.stat}
                 </motion.p>
 
                 {/* Title */}
-                <h3
-                  className="text-2xl text-[#570f46] mb-3"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                >
+                <h3 className="text-2xl text-[#570f46] mb-3">
                   {benefit.title}
                 </h3>
 
                 {/* Description */}
-                <p
-                  className="text-gray-600 flex-grow"
-                  style={{ fontFamily: "'Inter', sans-serif" }}
-                >
-                  {benefit.description}
-                </p>
+                <p className="text-gray-600 flex-grow">{benefit.description}</p>
 
                 {/* Decorative gradient on hover */}
                 <div
@@ -136,10 +121,7 @@ export default function SleepBenefits() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="mt-16 p-8 bg-gradient-to-br from-[#570f46]/5 to-[#d28db9]/5 rounded-3xl border border-[#d28db9]/20 text-center"
         >
-          <p
-            className="text-lg text-gray-700"
-            style={{ fontFamily: "'Inter', sans-serif" }}
-          >
+          <p className="text-lg text-gray-700">
             <span className="text-[#570f46]">Studies show</span> that quality
             sleep on a premium mattress can improve these metrics significantly
             within just 30 days.

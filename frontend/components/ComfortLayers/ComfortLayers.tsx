@@ -53,28 +53,17 @@ export default function ComfortLayers() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-[#d28db9]/30 mb-6">
             <Layers className="w-4 h-4 text-[#d28db9]" />
-            <span
-              className="text-sm text-[#570f46]"
-              style={{ fontFamily: "'Inter', sans-serif" }}
-            >
-              Inside Casa Bali
-            </span>
+            <span className="text-sm text-[#570f46]">Inside Casa Bali</span>
           </div>
 
-          <h2
-            className="text-5xl md:text-6xl text-[#570f46] mb-6"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
+          <h2 className="text-5xl md:text-6xl text-[#570f46] mb-6">
             Five Layers of
             <br />
             <span className="bg-gradient-to-r from-[#570f46] to-[#d28db9] bg-clip-text text-transparent">
               Pure Comfort
             </span>
           </h2>
-          <p
-            className="text-xl text-gray-600 max-w-2xl mx-auto"
-            style={{ fontFamily: "'Inter', sans-serif" }}
-          >
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Each layer is engineered to work in harmony, delivering the perfect
             balance of softness, support, and temperature control
           </p>
@@ -99,10 +88,7 @@ export default function ComfortLayers() {
                     whileHover={{ scale: 1.02, x: 10 }}
                     className={`${layer.height} bg-gradient-to-r ${layer.color} rounded-2xl flex items-center px-6 shadow-md cursor-pointer transition-all`}
                   >
-                    <span
-                      className="text-sm text-gray-700"
-                      style={{ fontFamily: "'Inter', sans-serif" }}
-                    >
+                    <span className="text-sm text-gray-700">
                       Layer {index + 1}
                     </span>
                   </motion.div>
@@ -114,7 +100,6 @@ export default function ComfortLayers() {
                 animate={isInView ? { opacity: 1 } : {}}
                 transition={{ delay: 1.5 }}
                 className="text-center mt-8 text-sm text-gray-500"
-                style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 Total Height: 12 inches
               </motion.p>
@@ -141,18 +126,10 @@ export default function ComfortLayers() {
                     {index + 1}
                   </div>
                   <div>
-                    <h3
-                      className="text-xl text-[#570f46] mb-2"
-                      style={{ fontFamily: "'Playfair Display', serif" }}
-                    >
+                    <h3 className="text-xl text-[#570f46] mb-2">
                       {layer.name}
                     </h3>
-                    <p
-                      className="text-gray-600"
-                      style={{ fontFamily: "'Inter', sans-serif" }}
-                    >
-                      {layer.description}
-                    </p>
+                    <p className="text-gray-600">{layer.description}</p>
                   </div>
                 </div>
               </motion.div>

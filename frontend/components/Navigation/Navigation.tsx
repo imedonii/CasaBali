@@ -16,18 +16,10 @@ export default function Navigation({ isScrolled }: NavigationProps) {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <motion.div whileHover={{ scale: 1.05 }} className="cursor-pointer">
-          <h1
-            style={{ fontFamily: "'Playfair Display', serif" }}
-            className="text-3xl text-[#570f46]"
-          >
-            Casa Bali
-          </h1>
+          <h1 className="text-3xl text-[#570f46]">Casa Bali</h1>
         </motion.div>
 
-        <div
-          className="hidden md:flex items-center gap-8"
-          style={{ fontFamily: "'Inter', sans-serif" }}
-        >
+        <div className="hidden md:flex items-center gap-8">
           <a
             href="#mattress"
             className="text-gray-700 hover:text-[#570f46] transition-colors"

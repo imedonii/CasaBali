@@ -35,20 +35,14 @@ export default function SleepPositions() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2
-            className="text-5xl md:text-6xl text-[#570f46] mb-6"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
+          <h2 className="text-5xl md:text-6xl text-[#570f46] mb-6">
             Perfect for
             <br />
             <span className="bg-gradient-to-r from-[#570f46] to-[#d28db9] bg-clip-text text-transparent">
               All Sleep Positions
             </span>
           </h2>
-          <p
-            className="text-xl text-gray-600 max-w-2xl mx-auto"
-            style={{ fontFamily: "'Inter', sans-serif" }}
-          >
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             However you sleep, Casa Bali has you covered with adaptive support
           </p>
         </motion.div>
@@ -78,25 +72,16 @@ export default function SleepPositions() {
                 {position.emoji}
               </motion.div>
 
-              <h3
-                className="text-2xl text-[#570f46] mb-4 text-center"
-                style={{ fontFamily: "'Playfair Display', serif" }}
-              >
+              <h3 className="text-2xl text-[#570f46] mb-4 text-center">
                 {position.name}
               </h3>
 
-              <p
-                className="text-gray-600 mb-4 text-center"
-                style={{ fontFamily: "'Inter', sans-serif" }}
-              >
+              <p className="text-gray-600 mb-4 text-center">
                 {position.description}
               </p>
 
               <div className="pt-4 border-t border-[#d28db9]/20">
-                <p
-                  className="text-sm text-[#570f46] text-center"
-                  style={{ fontFamily: "'Inter', sans-serif" }}
-                >
+                <p className="text-sm text-[#570f46] text-center">
                   ✓ {position.benefit}
                 </p>
               </div>
@@ -110,17 +95,11 @@ export default function SleepPositions() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="mt-16 p-8 bg-gradient-to-r from-[#570f46]/5 to-[#d28db9]/5 rounded-3xl text-center"
         >
-          <p
-            className="text-lg text-gray-700 mb-4"
-            style={{ fontFamily: "'Inter', sans-serif" }}
-          >
+          <p className="text-lg text-gray-700 mb-4">
             <span className="text-[#570f46]">Combination sleepers?</span> No
             problem.
           </p>
-          <p
-            className="text-gray-600"
-            style={{ fontFamily: "'Inter', sans-serif" }}
-          >
+          <p className="text-gray-600">
             Casa Bali's adaptive design automatically adjusts to your movements
             throughout the night.
           </p>

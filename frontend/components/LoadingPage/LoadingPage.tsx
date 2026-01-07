@@ -97,7 +97,7 @@ export default function LoadingPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
-          <h1 className="font-['Playfair_Display'] text-6xl md:text-8xl text-transparent bg-clip-text bg-gradient-to-br from-[#570f46] to-[#d28db9] mb-4">
+          <h1 className="text-6xl md:text-8xl text-transparent bg-clip-text bg-gradient-to-br from-[#570f46] to-[#d28db9] mb-4">
             Casa Bali
           </h1>
         </motion.div>

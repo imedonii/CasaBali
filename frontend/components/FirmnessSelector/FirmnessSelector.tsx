@@ -33,20 +33,14 @@ export default function FirmnessSelector() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2
-            className="text-5xl md:text-6xl text-[#570f46] mb-6"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
+          <h2 className="text-5xl md:text-6xl text-[#570f46] mb-6">
             Find Your Perfect
             <br />
             <span className="bg-gradient-to-r from-[#570f46] to-[#d28db9] bg-clip-text text-transparent">
               Firmness Level
             </span>
           </h2>
-          <p
-            className="text-xl text-gray-600 max-w-2xl mx-auto"
-            style={{ fontFamily: "'Inter', sans-serif" }}
-          >
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Casa Bali adapts to your preferences with our customizable firmness
             options
           </p>
@@ -61,27 +55,16 @@ export default function FirmnessSelector() {
           {/* Interactive slider */}
           <div className="mb-12">
             <div className="flex justify-between items-center mb-8">
-              <span
-                className="text-gray-500"
-                style={{ fontFamily: "'Inter', sans-serif" }}
-              >
-                Soft
-              </span>
+              <span className="text-gray-500">Soft</span>
               <motion.span
                 key={firmness[0]}
                 initial={{ scale: 1.2, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 className="text-3xl text-[#570f46]"
-                style={{ fontFamily: "'Playfair Display', serif" }}
               >
                 {getFirmnessLabel(firmness[0])}
               </motion.span>
-              <span
-                className="text-gray-500"
-                style={{ fontFamily: "'Inter', sans-serif" }}
-              >
-                Firm
-              </span>
+              <span className="text-gray-500">Firm</span>
             </div>
 
             <Slider
@@ -97,7 +80,6 @@ export default function FirmnessSelector() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               className="text-center text-lg text-gray-600"
-              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               {getFirmnessDescription(firmness[0])}
             </motion.p>
@@ -122,12 +104,7 @@ export default function FirmnessSelector() {
                 }`}
               >
                 <div className="text-4xl mb-3">{option.icon}</div>
-                <p
-                  className="text-xl text-[#570f46]"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                >
-                  {option.label}
-                </p>
+                <p className="text-xl text-[#570f46]">{option.label}</p>
               </motion.button>
             ))}
           </div>
@@ -142,7 +119,6 @@ export default function FirmnessSelector() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 bg-gradient-to-r from-[#570f46] to-[#d28db9] text-white rounded-full shadow-lg"
-              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Get Your Perfect Match
             </motion.button>

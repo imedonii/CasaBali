@@ -19,20 +19,14 @@ export default function ProductShowcase() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2
-            className="text-5xl md:text-6xl text-[#570f46] mb-6"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
+          <h2 className="text-5xl md:text-6xl text-[#570f46] mb-6">
             The Casa Bali
             <br />
             <span className="bg-gradient-to-r from-[#570f46] to-[#d28db9] bg-clip-text text-transparent">
               Signature Mattress
             </span>
           </h2>
-          <p
-            className="text-xl text-gray-600 max-w-2xl mx-auto"
-            style={{ fontFamily: "'Inter', sans-serif" }}
-          >
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             A masterpiece of comfort engineering, designed to transform your
             sleep experience
           </p>
@@ -60,12 +54,7 @@ export default function ProductShowcase() {
               transition={{ delay: 0.8 }}
               className="absolute top-1/4 left-0 bg-white/95 backdrop-blur-md rounded-r-2xl px-6 py-4 shadow-xl"
             >
-              <p
-                className="text-sm text-[#570f46]"
-                style={{ fontFamily: "'Inter', sans-serif" }}
-              >
-                5-Layer System
-              </p>
+              <p className="text-sm text-[#570f46]">5-Layer System</p>
             </motion.div>
 
             <motion.div
@@ -74,12 +63,7 @@ export default function ProductShowcase() {
               transition={{ delay: 1 }}
               className="absolute top-1/2 right-0 bg-white/95 backdrop-blur-md rounded-l-2xl px-6 py-4 shadow-xl"
             >
-              <p
-                className="text-sm text-[#570f46]"
-                style={{ fontFamily: "'Inter', sans-serif" }}
-              >
-                Cooling Gel Memory Foam
-              </p>
+              <p className="text-sm text-[#570f46]">Cooling Gel Memory Foam</p>
             </motion.div>
 
             <motion.div
@@ -88,12 +72,7 @@ export default function ProductShowcase() {
               transition={{ delay: 1.2 }}
               className="absolute bottom-1/4 left-0 bg-white/95 backdrop-blur-md rounded-r-2xl px-6 py-4 shadow-xl"
             >
-              <p
-                className="text-sm text-[#570f46]"
-                style={{ fontFamily: "'Inter', sans-serif" }}
-              >
-                Edge Support Technology
-              </p>
+              <p className="text-sm text-[#570f46]">Edge Support Technology</p>
             </motion.div>
           </div>
 
@@ -115,18 +94,8 @@ export default function ProductShowcase() {
                 whileHover={{ scale: 1.05 }}
                 className="p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-[#d28db9]/20 text-center"
               >
-                <p
-                  className="text-3xl text-[#570f46] mb-2"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                >
-                  {spec.value}
-                </p>
-                <p
-                  className="text-sm text-gray-600"
-                  style={{ fontFamily: "'Inter', sans-serif" }}
-                >
-                  {spec.label}
-                </p>
+                <p className="text-3xl text-[#570f46] mb-2">{spec.value}</p>
+                <p className="text-sm text-gray-600">{spec.label}</p>
               </motion.div>
             ))}
           </motion.div>

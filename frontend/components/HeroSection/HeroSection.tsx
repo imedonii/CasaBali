@@ -53,15 +53,11 @@ export default function HeroSection() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
               className="inline-block px-4 py-2 bg-gradient-to-r from-[#570f46]/10 to-[#d28db9]/10 rounded-full text-[#570f46] mb-6"
-              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Premium Sleep Experience
             </motion.span>
 
-            <h1
-              className="text-6xl md:text-7xl lg:text-8xl text-[#570f46] leading-tight mb-6"
-              style={{ fontFamily: "'Playfair Display', serif" }}
-            >
+            <h1 className="text-6xl md:text-7xl lg:text-8xl text-[#570f46] leading-tight mb-6">
               Sleep in
               <br />
               <span className="bg-gradient-to-r from-[#570f46] to-[#d28db9] bg-clip-text text-transparent">
@@ -69,10 +65,7 @@ export default function HeroSection() {
               </span>
             </h1>
 
-            <p
-              className="text-xl text-gray-600 max-w-lg leading-relaxed"
-              style={{ fontFamily: "'Inter', sans-serif" }}
-            >
+            <p className="text-xl text-gray-600 max-w-lg leading-relaxed">
               Experience the perfect blend of comfort, support, and elegance.
               Casa Bali redefines what it means to truly rest.
             </p>
@@ -89,7 +82,6 @@ export default function HeroSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="group px-8 py-4 bg-gradient-to-r from-[#570f46] to-[#d28db9] text-white rounded-full shadow-lg hover:shadow-2xl transition-all flex items-center justify-center gap-2"
-              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Discover Casa Bali
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -100,7 +92,6 @@ export default function HeroSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 border-2 border-[#570f46] text-[#570f46] rounded-full hover:bg-[#570f46]/5 transition-all flex items-center justify-center"
-              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Learn More
             </motion.a>
@@ -112,33 +103,17 @@ export default function HeroSection() {
             animate={{ opacity: 1 }}
             transition={{ delay: 1 }}
             className="grid grid-cols-3 gap-8 pt-8"
-            style={{ fontFamily: "'Inter', sans-serif" }}
           >
             <div>
-              <p
-                className="text-4xl text-[#570f46]"
-                style={{ fontFamily: "'Playfair Display', serif" }}
-              >
-                100
-              </p>
+              <p className="text-4xl text-[#570f46]">100</p>
               <p className="text-sm text-gray-600">Night Trial</p>
             </div>
             <div>
-              <p
-                className="text-4xl text-[#570f46]"
-                style={{ fontFamily: "'Playfair Display', serif" }}
-              >
-                15
-              </p>
+              <p className="text-4xl text-[#570f46]">15</p>
               <p className="text-sm text-gray-600">Year Warranty</p>
             </div>
             <div>
-              <p
-                className="text-4xl text-[#570f46]"
-                style={{ fontFamily: "'Playfair Display', serif" }}
-              >
-                5★
-              </p>
+              <p className="text-4xl text-[#570f46]">5★</p>
               <p className="text-sm text-gray-600">Rated</p>
             </div>
           </motion.div>
@@ -175,12 +150,7 @@ export default function HeroSection() {
               transition={{ delay: 1.2, type: 'spring' }}
               className="absolute top-8 right-8 bg-white/90 backdrop-blur-md rounded-full px-6 py-3 shadow-xl"
             >
-              <p
-                className="text-sm text-[#570f46]"
-                style={{ fontFamily: "'Inter', sans-serif" }}
-              >
-                Free Shipping
-              </p>
+              <p className="text-sm text-[#570f46]">Free Shipping</p>
             </motion.div>
           </motion.div>
         </motion.div>

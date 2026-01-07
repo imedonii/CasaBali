@@ -53,20 +53,14 @@ export default function WhyDifferent() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2
-            className="text-5xl md:text-6xl text-[#570f46] mb-6"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
+          <h2 className="text-5xl md:text-6xl text-[#570f46] mb-6">
             Why Casa Bali is
             <br />
             <span className="bg-gradient-to-r from-[#570f46] to-[#d28db9] bg-clip-text text-transparent">
               Different
             </span>
           </h2>
-          <p
-            className="text-xl text-gray-600 max-w-2xl mx-auto"
-            style={{ fontFamily: "'Inter', sans-serif" }}
-          >
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             We don't just sell mattresses—we deliver an elevated sleep
             experience
           </p>
@@ -90,18 +84,8 @@ export default function WhyDifferent() {
                 <feature.icon className="w-8 h-8 text-[#570f46]" />
               </motion.div>
 
-              <h3
-                className="text-2xl text-[#570f46] mb-3"
-                style={{ fontFamily: "'Playfair Display', serif" }}
-              >
-                {feature.title}
-              </h3>
-              <p
-                className="text-gray-600"
-                style={{ fontFamily: "'Inter', sans-serif" }}
-              >
-                {feature.description}
-              </p>
+              <h3 className="text-2xl text-[#570f46] mb-3">{feature.title}</h3>
+              <p className="text-gray-600">{feature.description}</p>
             </motion.div>
           ))}
         </div>

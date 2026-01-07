@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import '../styles/theme.css';
+import { modulusPro } from './font';
 
 export const metadata: Metadata = {
   title: 'Casa Bali',
@@ -26,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={modulusPro.className}>{children}</body>
     </html>
   );
 }

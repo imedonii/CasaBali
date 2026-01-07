@@ -11,14 +11,10 @@ export default function Footer() {
             <motion.h3
               whileHover={{ scale: 1.05 }}
               className="text-3xl mb-4 cursor-pointer"
-              style={{ fontFamily: "'Playfair Display', serif" }}
             >
               Casa Bali
             </motion.h3>
-            <p
-              className="text-white/80 mb-6"
-              style={{ fontFamily: "'Inter', sans-serif" }}
-            >
+            <p className="text-white/80 mb-6">
               Redefining luxury sleep, one night at a time.
             </p>
             <div className="flex gap-4">
@@ -37,16 +33,8 @@ export default function Footer() {
 
           {/* Shop */}
           <div>
-            <h4
-              className="text-xl mb-4"
-              style={{ fontFamily: "'Playfair Display', serif" }}
-            >
-              Quick Links
-            </h4>
-            <ul
-              className="space-y-3"
-              style={{ fontFamily: "'Inter', sans-serif" }}
-            >
+            <h4 className="text-xl mb-4">Quick Links</h4>
+            <ul className="space-y-3">
               {[
                 'Mattresses',
                 'Why Casa Bali',
@@ -68,16 +56,8 @@ export default function Footer() {
 
           {/* Support */}
           <div>
-            <h4
-              className="text-xl mb-4"
-              style={{ fontFamily: "'Playfair Display', serif" }}
-            >
-              Support
-            </h4>
-            <ul
-              className="space-y-3"
-              style={{ fontFamily: "'Inter', sans-serif" }}
-            >
+            <h4 className="text-xl mb-4">Support</h4>
+            <ul className="space-y-3">
               {[
                 'Contact Us',
                 'FAQ',
@@ -100,16 +80,8 @@ export default function Footer() {
 
           {/* Newsletter */}
           <div>
-            <h4
-              className="text-xl mb-4"
-              style={{ fontFamily: "'Playfair Display', serif" }}
-            >
-              Stay Connected
-            </h4>
-            <p
-              className="text-white/80 mb-4 text-sm"
-              style={{ fontFamily: "'Inter', sans-serif" }}
-            >
+            <h4 className="text-xl mb-4">Stay Connected</h4>
+            <p className="text-white/80 mb-4 text-sm">
               Subscribe for exclusive offers and sleep tips
             </p>
             <div className="flex gap-2 mb-6">
@@ -117,13 +89,11 @@ export default function Footer() {
                 type="email"
                 placeholder="Your email"
                 className="flex-1 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-white/40"
-                style={{ fontFamily: "'Inter', sans-serif" }}
               />
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-6 py-2 bg-white text-[#570f46] rounded-full hover:bg-white/90 transition-all"
-                style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 Join
               </motion.button>
@@ -132,15 +102,11 @@ export default function Footer() {
             <div className="space-y-2 text-sm text-white/80">
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
-                <span style={{ fontFamily: "'Inter', sans-serif" }}>
-                  +383 49 101 028
-                </span>
+                <span>+383 49 101 028</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                <span style={{ fontFamily: "'Inter', sans-serif" }}>
-                  info@casabali.eu
-                </span>
+                <span>info@casabali.eu</span>
               </div>
             </div>
           </div>
@@ -150,20 +116,14 @@ export default function Footer() {
         <div className="pt-8 border-t border-white/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div>
-              <p
-                className="text-white/60 text-sm"
-                style={{ fontFamily: "'Inter', sans-serif" }}
-              >
+              <p className="text-white/60 text-sm">
                 {`© ${new Date().getFullYear()} Casa Bali. All rights reserved.`}
               </p>
               <p className="text-white/60 text-sl">
                 Powered by: <u>cre8clarity</u>.
               </p>
             </div>
-            <div
-              className="flex gap-6 text-sm text-white/60"
-              style={{ fontFamily: "'Inter', sans-serif" }}
-            >
+            <div className="flex gap-6 text-sm text-white/60">
               <motion.a
                 whileHover={{ color: 'rgba(255,255,255,1)' }}
                 href="#privacy"

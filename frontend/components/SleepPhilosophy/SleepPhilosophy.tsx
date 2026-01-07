@@ -34,18 +34,8 @@ export default function SleepPhilosophy() {
                 transition={{ duration: 3, repeat: Infinity }}
                 className="absolute bottom-8 left-8 bg-white/95 backdrop-blur-md rounded-2xl px-6 py-4 shadow-xl"
               >
-                <p
-                  className="text-2xl text-[#570f46]"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                >
-                  8+ hrs
-                </p>
-                <p
-                  className="text-sm text-gray-600"
-                  style={{ fontFamily: "'Inter', sans-serif" }}
-                >
-                  Perfect sleep
-                </p>
+                <p className="text-2xl text-[#570f46]">8+ hrs</p>
+                <p className="text-sm text-gray-600">Perfect sleep</p>
               </motion.div>
             </div>
           </motion.div>
@@ -63,22 +53,13 @@ export default function SleepPhilosophy() {
                 animate={isInView ? { opacity: 1 } : {}}
                 transition={{ delay: 0.3 }}
                 className="text-[#d28db9] mb-4"
-                style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 Our Philosophy
               </motion.p>
 
-              <h2
-                className="text-5xl text-[#570f46] mb-6"
-                style={{ fontFamily: "'Playfair Display', serif" }}
-              >
-                Sleep is Sacred
-              </h2>
+              <h2 className="text-5xl text-[#570f46] mb-6">Sleep is Sacred</h2>
 
-              <p
-                className="text-lg text-gray-600 leading-relaxed mb-8"
-                style={{ fontFamily: "'Inter', sans-serif" }}
-              >
+              <p className="text-lg text-gray-600 leading-relaxed mb-8">
                 We believe that quality sleep is the foundation of a well-lived
                 life. That's why every Casa Bali mattress is designed with one
                 goal: to give you the most restorative, peaceful night's sleep
@@ -118,18 +99,10 @@ export default function SleepPhilosophy() {
                     <item.icon className="w-6 h-6 text-[#570f46]" />
                   </div>
                   <div>
-                    <h3
-                      className="text-xl text-[#570f46] mb-2"
-                      style={{ fontFamily: "'Playfair Display', serif" }}
-                    >
+                    <h3 className="text-xl text-[#570f46] mb-2">
                       {item.title}
                     </h3>
-                    <p
-                      className="text-gray-600"
-                      style={{ fontFamily: "'Inter', sans-serif" }}
-                    >
-                      {item.description}
-                    </p>
+                    <p className="text-gray-600">{item.description}</p>
                   </div>
                 </motion.div>
               ))}
