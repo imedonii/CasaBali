@@ -12,6 +12,7 @@ import SleepBenefits from '../SleepBenefits/SleepBenefits';
 import FirmnessSelector from '../FirmnessSelector/FirmnessSelector';
 import SleepPositions from '../SleepPositions/SleepPositions';
 import Materials from '../Materials/Materials';
+import Footer from '../Footer/Footer';
 
 export const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,6 +41,8 @@ export const Home = () => {
         <SleepPositions />
         <Materials />
       </main>
+
+      <Footer />
     </>
   );
 };
