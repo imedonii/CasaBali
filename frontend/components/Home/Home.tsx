@@ -7,6 +7,7 @@ import BrandIntro from '../BrandIntro/BrandIntro';
 import SleepPhilosophy from '../SleepPhilosophy/SleepPhilosophy';
 import ProductShowcase from '../ProductShowcase/ProductShowcase';
 import ComfortLayers from '../ComfortLayers/ComfortLayers';
+import WhyDifferent from '../WhyDifferent/WhyDifferent';
 
 export const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,6 +30,7 @@ export const Home = () => {
         <SleepPhilosophy />
         <ProductShowcase />
         <ComfortLayers />
+        <WhyDifferent />
       </main>
     </>
   );
