@@ -41,7 +41,7 @@ export default function Footer() {
               className="text-xl mb-4"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Shop
+              Quick Links
             </h4>
             <ul
               className="space-y-3"
@@ -49,10 +49,9 @@ export default function Footer() {
             >
               {[
                 'Mattresses',
-                'Pillows',
-                'Bedding',
-                'Accessories',
-                'Gift Cards',
+                'Why Casa Bali',
+                'Reviews',
+                '100-Night Trial',
               ].map((item, index) => (
                 <li key={index}>
                   <motion.a

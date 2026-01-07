@@ -13,9 +13,12 @@ import FirmnessSelector from '../FirmnessSelector/FirmnessSelector';
 import SleepPositions from '../SleepPositions/SleepPositions';
 import Materials from '../Materials/Materials';
 import Footer from '../Footer/Footer';
+import { AnimatePresence } from 'framer-motion';
+import LoadingPage from '../LoadingPage/LoadingPage';
 
 export const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +27,22 @@ export const Home = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <AnimatePresence>
+        <LoadingPage />
+      </AnimatePresence>
+    );
+  }
 
   return (
     <>
