@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Navigation from '../Navigation/Navigation';
+import HeroSection from '../HeroSection/HeroSection';
 
 export const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,7 +19,9 @@ export const Home = () => {
     <>
       <Navigation isScrolled={isScrolled} />
 
-      <main>Home</main>
+      <main>
+        <HeroSection />
+      </main>
     </>
   );
 };
