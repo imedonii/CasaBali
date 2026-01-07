@@ -9,6 +9,7 @@ import ProductShowcase from '../ProductShowcase/ProductShowcase';
 import ComfortLayers from '../ComfortLayers/ComfortLayers';
 import WhyDifferent from '../WhyDifferent/WhyDifferent';
 import SleepBenefits from '../SleepBenefits/SleepBenefits';
+import FirmnessSelector from '../FirmnessSelector/FirmnessSelector';
 
 export const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,6 +34,7 @@ export const Home = () => {
         <ComfortLayers />
         <WhyDifferent />
         <SleepBenefits />
+        <FirmnessSelector />
       </main>
     </>
   );
