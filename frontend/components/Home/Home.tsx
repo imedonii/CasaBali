@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Navigation from '../Navigation/Navigation';
 import HeroSection from '../HeroSection/HeroSection';
 import BrandIntro from '../BrandIntro/BrandIntro';
+import SleepPhilosophy from '../SleepPhilosophy/SleepPhilosophy';
 
 export const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,6 +24,7 @@ export const Home = () => {
       <main>
         <HeroSection />
         <BrandIntro />
+        <SleepPhilosophy />
       </main>
     </>
   );
