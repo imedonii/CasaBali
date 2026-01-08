@@ -15,6 +15,7 @@ import Materials from '../Materials/Materials';
 import Footer from '../Footer/Footer';
 import { AnimatePresence } from 'framer-motion';
 import LoadingPage from '../LoadingPage/LoadingPage';
+import CoolingTech from '../CoolingTech/CoolingTech';
 
 export const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -59,6 +60,7 @@ export const Home = () => {
         <FirmnessSelector />
         <SleepPositions />
         <Materials />
+        <CoolingTech />
       </main>
 
       <Footer />
