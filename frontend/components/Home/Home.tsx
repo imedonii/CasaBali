@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import Navigation from '../Navigation/Navigation';
 import HeroSection from '../HeroSection/HeroSection';
 import BrandIntro from '../BrandIntro/BrandIntro';
@@ -13,9 +14,9 @@ import FirmnessSelector from '../FirmnessSelector/FirmnessSelector';
 import SleepPositions from '../SleepPositions/SleepPositions';
 import Materials from '../Materials/Materials';
 import Footer from '../Footer/Footer';
-import { AnimatePresence } from 'framer-motion';
 import LoadingPage from '../LoadingPage/LoadingPage';
 import CoolingTech from '../CoolingTech/CoolingTech';
+import MotionIsolation from '../MotionIsolation/MotionIsolation';
 
 export const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -61,6 +62,7 @@ export const Home = () => {
         <SleepPositions />
         <Materials />
         <CoolingTech />
+        <MotionIsolation />
       </main>
 
       <Footer />
