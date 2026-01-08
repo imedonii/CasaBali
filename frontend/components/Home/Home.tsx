@@ -17,6 +17,7 @@ import Footer from '../Footer/Footer';
 import LoadingPage from '../LoadingPage/LoadingPage';
 import CoolingTech from '../CoolingTech/CoolingTech';
 import MotionIsolation from '../MotionIsolation/MotionIsolation';
+import Testimonials from '../Testimonials/Testimonials';
 
 export const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -63,6 +64,7 @@ export const Home = () => {
         <Materials />
         <CoolingTech />
         <MotionIsolation />
+        <Testimonials />
       </main>
 
       <Footer />
