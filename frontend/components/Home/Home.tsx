@@ -22,6 +22,7 @@ import LifestyleGallery from '../LifestyleGallery/LifestyleGallery';
 import ComparisonTable from '../ComparisonTable/ComparisonTable';
 import DeliveryExperience from '../DeliveryExperience/DeliveryExperience';
 import TrialWarranty from '../TrialWarranty/TrialWarranty';
+import CTASection from '../CTASection/CTASection';
 
 export const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -73,6 +74,7 @@ export const Home = () => {
         <ComparisonTable />
         <DeliveryExperience />
         <TrialWarranty />
+        <CTASection />
       </main>
 
       <Footer />
