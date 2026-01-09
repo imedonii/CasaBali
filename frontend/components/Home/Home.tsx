@@ -20,6 +20,7 @@ import MotionIsolation from '../MotionIsolation/MotionIsolation';
 import Testimonials from '../Testimonials/Testimonials';
 import LifestyleGallery from '../LifestyleGallery/LifestyleGallery';
 import ComparisonTable from '../ComparisonTable/ComparisonTable';
+import DeliveryExperience from '../DeliveryExperience/DeliveryExperience';
 
 export const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -69,6 +70,7 @@ export const Home = () => {
         <Testimonials />
         <LifestyleGallery />
         <ComparisonTable />
+        <DeliveryExperience />
       </main>
 
       <Footer />
