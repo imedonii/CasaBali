@@ -4,18 +4,17 @@ import { ImageWithFallback } from '../figma/ImageWithFallback';
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden pt-20 will-change-transform">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-pink-50/50 via-purple-50/30 to-white" />
 
       {/* Floating elements */}
       <motion.div
         animate={{
-          y: [0, -20, 0],
-          rotate: [0, 5, 0],
+          y: [0, -16, 0],
         }}
         transition={{
-          duration: 8,
+          duration: 10,
           repeat: Infinity,
           ease: 'easeInOut',
         }}
@@ -24,29 +23,30 @@ export default function HeroSection() {
 
       <motion.div
         animate={{
-          y: [0, 20, 0],
-          rotate: [0, -5, 0],
+          y: [0, 16, 0],
         }}
         transition={{
-          duration: 10,
+          duration: 12,
           repeat: Infinity,
           ease: 'easeInOut',
         }}
         className="absolute bottom-32 left-20 w-96 h-96 bg-gradient-to-br from-[#570f46]/10 to-[#d28db9]/10 rounded-full blur-3xl"
       />
 
-      <div className="relative max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
         {/* Left content */}
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
           className="space-y-8"
         >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
           >
             <motion.span
               initial={{ opacity: 0 }}
@@ -73,8 +73,9 @@ export default function HeroSection() {
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4"
           >
             <motion.a
@@ -100,8 +101,9 @@ export default function HeroSection() {
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ delay: 0.5 }}
             className="grid grid-cols-3 gap-8 pt-8"
           >
             <div>
@@ -121,17 +123,18 @@ export default function HeroSection() {
 
         {/* Right content - Mattress Image */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.6 }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
           className="relative"
         >
           <motion.div
             animate={{
-              y: [0, -15, 0],
+              y: [0, -10, 0],
             }}
             transition={{
-              duration: 5,
+              duration: 7,
               repeat: Infinity,
               ease: 'easeInOut',
             }}
@@ -146,8 +149,9 @@ export default function HeroSection() {
             {/* Badge overlay */}
             <motion.div
               initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 1.2, type: 'spring' }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ delay: 0.4, type: 'spring' }}
               className="absolute top-8 right-8 bg-white/90 backdrop-blur-md rounded-full px-6 py-3 shadow-xl"
             >
               <p className="text-sm text-[#570f46]">Free Shipping</p>

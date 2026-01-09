@@ -29,8 +29,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={modulusPro.className}>{children}</body>
+    <html lang="en" className="overflow-x-hidden">
+      <body className={`${modulusPro.className} w-full overflow-x-hidden`}>
+        <div className="w-full overflow-x-hidden">{children}</div>
+      </body>
     </html>
   );
 }

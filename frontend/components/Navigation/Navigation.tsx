@@ -18,12 +18,16 @@ export default function Navigation({ isScrolled }: NavigationProps) {
     setIsMobileMenuOpen(false);
   };
 
+  const isSolidBg = isScrolled || isMobileMenuOpen;
+
   return (
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled ? 'bg-white/80 backdrop-blur-xl shadow-lg' : 'bg-transparent'
+        isSolidBg
+          ? 'bg-white/80 backdrop-blur-xl shadow-lg'
+          : 'bg-white/40 backdrop-blur-md'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -88,8 +92,10 @@ export default function Navigation({ isScrolled }: NavigationProps) {
           x: isMobileMenuOpen ? 0 : '100%',
         }}
         transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-        className={`fixed top-0 right-0 bottom-0 w-full sm:w-80 bg-white shadow-2xl md:hidden ${
-          isMobileMenuOpen ? 'pointer-events-auto' : 'pointer-events-none'
+        className={`fixed top-0 right-0 bottom-0 w-full max-w-full sm:w-72 bg-white shadow-2xl md:hidden ${
+          isMobileMenuOpen
+            ? 'pointer-events-auto h-screen'
+            : 'pointer-events-none h-0'
         }`}
       >
         <div className="flex flex-col h-full pt-20 px-6 pb-6">
@@ -97,6 +103,15 @@ export default function Navigation({ isScrolled }: NavigationProps) {
             className="flex flex-col gap-6 flex-1"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
+            <a href="/" className="cursor-pointer">
+              <Image
+                src="/CasaBali.svg"
+                alt="Casa Bali"
+                width={120}
+                height={120}
+              />
+            </a>
+
             <a
               href="#"
               className="text-xl text-gray-700 hover:text-[#570f46] transition-colors"
