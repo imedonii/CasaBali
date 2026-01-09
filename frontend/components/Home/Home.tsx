@@ -23,6 +23,7 @@ import ComparisonTable from '../ComparisonTable/ComparisonTable';
 import DeliveryExperience from '../DeliveryExperience/DeliveryExperience';
 import TrialWarranty from '../TrialWarranty/TrialWarranty';
 import CTASection from '../CTASection/CTASection';
+import FAQSection from '../FAQSection/FAQSection';
 
 export const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -75,6 +76,7 @@ export const Home = () => {
         <DeliveryExperience />
         <TrialWarranty />
         <CTASection />
+        <FAQSection />
       </main>
 
       <Footer />
