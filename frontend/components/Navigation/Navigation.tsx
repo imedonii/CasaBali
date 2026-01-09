@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { Menu, ShoppingCart, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
 import { useState } from 'react';
 
 interface NavigationProps {
@@ -27,16 +28,11 @@ export default function Navigation({ isScrolled }: NavigationProps) {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <motion.a
-          href="#"
+          href="/"
           whileHover={{ scale: 1.05 }}
           className="cursor-pointer"
         >
-          <h1
-            style={{ fontFamily: "'Playfair Display', serif" }}
-            className="text-3xl text-[#570f46]"
-          >
-            Casa Bali
-          </h1>
+          <Image src="/CasaBali.svg" alt="Casa Bali" width={120} height={120} />
         </motion.a>
 
         {/* Desktop Menu */}
