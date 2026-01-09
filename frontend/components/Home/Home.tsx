@@ -19,6 +19,7 @@ import CoolingTech from '../CoolingTech/CoolingTech';
 import MotionIsolation from '../MotionIsolation/MotionIsolation';
 import Testimonials from '../Testimonials/Testimonials';
 import LifestyleGallery from '../LifestyleGallery/LifestyleGallery';
+import ComparisonTable from '../ComparisonTable/ComparisonTable';
 
 export const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -67,6 +68,7 @@ export const Home = () => {
         <MotionIsolation />
         <Testimonials />
         <LifestyleGallery />
+        <ComparisonTable />
       </main>
 
       <Footer />
