@@ -29,48 +29,47 @@ export const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const scrollTimeoutRef = useRef<number | null>(null);
+  const hasLoaded = useRef(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrolled = window.scrollY > 50;
+    if (hasLoaded.current) return;
 
-      if (scrollTimeoutRef.current !== null) {
-        return;
-      }
-
-      scrollTimeoutRef.current = window.setTimeout(() => {
-        scrollTimeoutRef.current = null;
-
-        setIsScrolled((prev) => {
-          if (prev === scrolled) return prev;
-          return scrolled;
-        });
-      }, 100);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      if (scrollTimeoutRef.current !== null) {
-        window.clearTimeout(scrollTimeoutRef.current);
-        scrollTimeoutRef.current = null;
-      }
-    };
-  }, []);
-
-  useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+      hasLoaded.current = true;
+    }, 1000); // Reduced from 2000ms to 1000ms for better UX
 
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (scrollTimeoutRef.current !== null) {
+        window.cancelAnimationFrame(scrollTimeoutRef.current);
+      }
+
+      scrollTimeoutRef.current = window.requestAnimationFrame(() => {
+        const scrolled = window.scrollY > 50;
+        setIsScrolled(scrolled);
+      });
+    };
+
+    // Use passive scroll for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Initial check
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (scrollTimeoutRef.current !== null) {
+        window.cancelAnimationFrame(scrollTimeoutRef.current);
+      }
+    };
+  }, []);
+
   if (isLoading) {
-    return (
-      <AnimatePresence>
-        <LoadingPage />
-      </AnimatePresence>
-    );
+    return <LoadingPage />;
   }
 
   return (

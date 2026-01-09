@@ -22,9 +22,10 @@ export default function Navigation({ isScrolled }: NavigationProps) {
 
   return (
     <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ type: 'spring', stiffness: 100, damping: 20 }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isSolidBg
           ? 'bg-white/80 backdrop-blur-xl shadow-lg'
           : 'bg-white/40 backdrop-blur-md'
@@ -91,8 +92,14 @@ export default function Navigation({ isScrolled }: NavigationProps) {
           opacity: isMobileMenuOpen ? 1 : 0,
           x: isMobileMenuOpen ? 0 : '100%',
         }}
-        transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-        className={`fixed top-0 right-0 bottom-0 w-full max-w-full sm:w-72 bg-white shadow-2xl md:hidden ${
+        transition={{
+          type: 'tween',
+          ease: [0.25, 0.1, 0.25, 1.0],
+          duration: 0.3,
+          when: 'beforeChildren',
+          staggerChildren: 0.05,
+        }}
+        className={`fixed top-0 right-0 bottom-0 w-full max-w-full sm:w-80 bg-white shadow-2xl md:hidden overflow-y-auto ${
           isMobileMenuOpen
             ? 'pointer-events-auto h-screen'
             : 'pointer-events-none h-0'
