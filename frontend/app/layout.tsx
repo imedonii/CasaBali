@@ -1,43 +1,46 @@
-import type { Metadata } from 'next';
+'use client';
+
 import './globals.css';
 import '../styles/theme.css';
 import { modulusPro } from './font';
 import Navigation from '@/components/Navigation/Navigation';
 import Footer from '@/components/Footer/Footer';
-
-export const metadata: Metadata = {
-  title: 'Casa Bali',
-  description: 'Casa Bali - Luxury Mattresses',
-  keywords: [
-    'Casa Bali',
-    'Luxury Mattresses',
-    'Bali',
-    'Mattresses',
-    'Bedding',
-    'Sleep',
-    'Comfort',
-    'Quality',
-    'Premium',
-    'Mattress',
-  ],
-  icons: {
-    icon: '/favicon.ico',
-  },
-};
+import LoadingPage from '@/components/LoadingPage/LoadingPage';
+import { useEffect, useRef, useState } from 'react';
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [isLoading, setIsLoading] = useState(true);
+  const hasLoaded = useRef(false);
+
+  useEffect(() => {
+    if (hasLoaded.current) return;
+
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+      hasLoaded.current = true;
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <html lang="en" className="overflow-x-hidden">
       <body className={`${modulusPro.className} w-full overflow-x-hidden`}>
-        <Navigation isScrolled={false} />
+        {isLoading ? (
+          <LoadingPage />
+        ) : (
+          <>
+            <Navigation isScrolled={false} />
 
-        <div className="w-full overflow-x-hidden">{children}</div>
+            <div className="w-full overflow-x-hidden">{children}</div>
 
-        <Footer />
+            <Footer />
+          </>
+        )}
       </body>
     </html>
   );

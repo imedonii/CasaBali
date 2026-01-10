@@ -11,7 +11,6 @@ import SleepBenefits from '../SleepBenefits/SleepBenefits';
 import FirmnessSelector from '../FirmnessSelector/FirmnessSelector';
 import SleepPositions from '../SleepPositions/SleepPositions';
 import Materials from '../Materials/Materials';
-import LoadingPage from '../LoadingPage/LoadingPage';
 import CoolingTech from '../CoolingTech/CoolingTech';
 import MotionIsolation from '../MotionIsolation/MotionIsolation';
 import Testimonials from '../Testimonials/Testimonials';
@@ -24,20 +23,7 @@ import FAQSection from '../FAQSection/FAQSection';
 
 export const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
   const scrollTimeoutRef = useRef<number | null>(null);
-  const hasLoaded = useRef(false);
-
-  useEffect(() => {
-    if (hasLoaded.current) return;
-
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-      hasLoaded.current = true;
-    }, 1000); // Reduced from 2000ms to 1000ms for better UX
-
-    return () => clearTimeout(timer);
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -64,10 +50,6 @@ export const Home = () => {
       }
     };
   }, []);
-
-  if (isLoading) {
-    return <LoadingPage />;
-  }
 
   return (
     <main>
