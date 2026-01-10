@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
+import { useRouter } from 'next/navigation';
 
 export default function HeroSection() {
+  const router = useRouter();
+
   return (
     <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden pt-20 will-change-transform">
       {/* Background gradient */}
@@ -89,10 +92,10 @@ export default function HeroSection() {
             </motion.a>
 
             <motion.a
-              href="#about"
+              onClick={() => router.push('/about')}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 border-2 border-[#570f46] text-[#570f46] rounded-full hover:bg-[#570f46]/5 transition-all flex items-center justify-center"
+              className="px-8 py-4 border-2 border-[#570f46] text-[#570f46] rounded-full hover:bg-[#570f46]/5 transition-all flex items-center justify-center cursor-pointer"
             >
               Learn More
             </motion.a>

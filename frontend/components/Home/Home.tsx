@@ -1,8 +1,6 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { AnimatePresence } from 'framer-motion';
-import Navigation from '../Navigation/Navigation';
 import HeroSection from '../HeroSection/HeroSection';
 import BrandIntro from '../BrandIntro/BrandIntro';
 import SleepPhilosophy from '../SleepPhilosophy/SleepPhilosophy';
@@ -13,7 +11,6 @@ import SleepBenefits from '../SleepBenefits/SleepBenefits';
 import FirmnessSelector from '../FirmnessSelector/FirmnessSelector';
 import SleepPositions from '../SleepPositions/SleepPositions';
 import Materials from '../Materials/Materials';
-import Footer from '../Footer/Footer';
 import LoadingPage from '../LoadingPage/LoadingPage';
 import CoolingTech from '../CoolingTech/CoolingTech';
 import MotionIsolation from '../MotionIsolation/MotionIsolation';
@@ -73,32 +70,26 @@ export const Home = () => {
   }
 
   return (
-    <>
-      <Navigation isScrolled={isScrolled} />
-
-      <main>
-        <HeroSection />
-        <BrandIntro />
-        <SleepPhilosophy />
-        <ProductShowcase />
-        <ComfortLayers />
-        <WhyDifferent />
-        <SleepBenefits />
-        <FirmnessSelector />
-        <SleepPositions />
-        <Materials />
-        <CoolingTech />
-        <MotionIsolation />
-        <Testimonials />
-        <LifestyleGallery />
-        <ComparisonTable />
-        <DeliveryExperience />
-        <TrialWarranty />
-        <CTASection />
-        <FAQSection />
-      </main>
-
-      <Footer />
-    </>
+    <main>
+      <HeroSection />
+      <BrandIntro />
+      <SleepPhilosophy />
+      <ProductShowcase />
+      <ComfortLayers />
+      <WhyDifferent />
+      <SleepBenefits />
+      <FirmnessSelector />
+      <SleepPositions />
+      <Materials />
+      <CoolingTech />
+      <MotionIsolation />
+      <Testimonials />
+      <LifestyleGallery />
+      <ComparisonTable />
+      <DeliveryExperience />
+      <TrialWarranty />
+      <CTASection />
+      <FAQSection />
+    </main>
   );
 };
