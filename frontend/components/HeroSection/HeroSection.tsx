@@ -82,7 +82,7 @@ export default function HeroSection() {
             className="flex flex-col sm:flex-row gap-4"
           >
             <motion.a
-              href="#discover"
+              onClick={() => router.push('/casabali')}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="group px-8 py-4 bg-gradient-to-r from-[#570f46] to-[#d28db9] text-white rounded-full shadow-lg hover:shadow-2xl transition-all flex items-center justify-center gap-2"
