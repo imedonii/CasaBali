@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 export default function HeroSection() {
   const router = useRouter();
@@ -143,11 +144,15 @@ export default function HeroSection() {
             }}
             className="relative rounded-3xl overflow-hidden shadow-2xl"
           >
-            <ImageWithFallback
-              src="https://images.unsplash.com/photo-1759176171634-674f37841636?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBtYXR0cmVzcyUyMGJlZHxlbnwxfHx8fDE3Njc2MDU5NDF8MA&ixlib=rb-4.1.0&q=80&w=1080"
-              alt="Casa Bali Luxury Mattress"
-              className="w-full h-auto"
-            />
+            <div className="relative w-full h-[500px] md:h-[600px] object-cover">
+              <Image
+                src="/assets/CasaBaliMattress.jpeg"
+                alt="Casa Bali Luxury Mattress"
+                fill
+                priority
+                className="object-cover"
+              />
+            </div>
 
             {/* Badge overlay */}
             <motion.div
