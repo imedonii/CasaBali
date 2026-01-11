@@ -142,16 +142,6 @@ export default function NotFound() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
-          <motion.a
-            href="/"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="group px-8 py-4 bg-gradient-to-r from-[#570f46] to-[#d28db9] text-white rounded-full shadow-lg hover:shadow-2xl transition-all flex items-center gap-2 min-w-[200px] justify-center"
-          >
-            <Home className="w-5 h-5" />
-            Go to Home
-          </motion.a>
-
           <motion.button
             onClick={() => window.history.back()}
             whileHover={{ scale: 1.05 }}
@@ -161,6 +151,16 @@ export default function NotFound() {
             <ArrowLeft className="w-5 h-5" />
             Go Back
           </motion.button>
+
+          <motion.a
+            href="/"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="group px-8 py-4 bg-gradient-to-r from-[#570f46] to-[#d28db9] text-white rounded-full shadow-lg hover:shadow-2xl transition-all flex items-center gap-2 min-w-[200px] justify-center"
+          >
+            <Home className="w-5 h-5" />
+            Go to Home
+          </motion.a>
         </motion.div>
 
         {/* Quick Links */}

@@ -31,7 +31,7 @@ function AccordionTrigger({
   ...props
 }: React.ComponentProps<typeof AccordionPrimitive.Trigger>) {
   return (
-    <AccordionPrimitive.Header className="flex">
+    <AccordionPrimitive.Header className="flex group">
       <AccordionPrimitive.Trigger
         data-slot="accordion-trigger"
         className={cn(
@@ -41,7 +41,9 @@ function AccordionTrigger({
         {...props}
       >
         {children}
-        <ChevronDownIcon className="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" />
+        <div className="flex justify-center items-center p-3 rounded-[14px] transition-all duration-200 border border-transparent group-data-[state=open]:border-[#570f46] bg-gradient-to-b from-white to-[#570f46]/10 group-data-[state=open]:shadow-[0_1px_3px_0_rgba(87,15,70,0.4),0_0_0_4px_rgba(210,141,185,0.5)]">
+          <ChevronDownIcon className="text-[#570f46] pointer-events-none size-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+        </div>
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
   );
